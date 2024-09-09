@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Sign-In Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>School Sign-In Management System</h1>
+        <form id="sign-in-form">
+            <div class="form-group">
+                <input type="text" id="worker-name" name="worker-name" required>
+                <label for="worker-name">Worker Name</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="class" name="class" required>
+                <label for="class">Class/Department</label>
+            </div>
+            <div class="form-group">
+                <input type="date" id="date" name="date" required>
+                <label for="date">Date</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="academic-year" name="academic-year" required>
+                <label for="academic-year">Academic Year</label>
+            </div>
+            <button type="button" onclick="signInWorker()">Sign In</button>
+        </form>
+        <h2>Signed-In Workers</h2>
+        <div class="table-container">
+            <table id="sign-in-table">
+                <thead>
+                    <tr>
+                        <th>Worker Name</th>
+                        <th>Class/Department</th>
+                        <th>Date</th>
+                        <th>Academic Year</th>
+                        <th>Sign-In Time</th>
+                        <th>Sign-Out Time</th>
+                        <th>Total Hours Taught</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sign-in records will be generated here -->
+                </tbody>
+            </table>
+        </div>
+        <button type="button" onclick="saveToPDF()">Save to PDF</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
